@@ -11,12 +11,14 @@ var geomath = require('./geomath');
 
 // Globals
 var MOBILE_BREAKPOINT = 600;
-var SIMPLE_LABELS = [{
-    'lat': 0,
-    'lng': 0,
-    'label': 'My label',
-    'class': ''
-}];
+var SIMPLE_LABELS = [];
+
+// {
+//     'lat': 0,
+//     'lng': 0,
+//     'label': 'My label',
+//     'class': ''
+// }
 
 // Map configurations
 // var configure = require('./maps/europe.js');
@@ -172,6 +174,15 @@ var renderMap = function(typeConfig, instanceConfig) {
     for (var layer in typeConfig['paths']) {
         renderPaths(typeConfig['paths'][layer]);
     }
+
+    // Second state layer
+    pathsElement.append('g')
+        .attr('class', 'outlines')
+        .selectAll('path')
+            .data(instanceConfig['data']['states']['features'])
+        .enter().append('path')
+            .attr('d', path)
+            .attr('class', classifyFeature);
 
     /*
      * Render labels.

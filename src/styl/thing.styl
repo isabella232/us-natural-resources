@@ -1,11 +1,24 @@
 @import 'maps/base'
-@import 'maps/usa'
+// @import 'maps/usa'
 // @import 'maps/europe'
-@import 'maps/world'
+// @import 'maps/world'
 
 .paths
+	.states path
+		fill $qz-map-land-fill
+
+	.solar path
+		fill $qz-purp-1
+
 	.coal path
-		fill $qz-purp-2
+		fill $qz-blue-2
 
 	.oil path
-		fill $qz-purp-4
+		fill $qz-blue-4
+
+	.outlines path
+		fill none
+		fill-opacity 0
+		stroke $qz-map-land-stroke
+		stroke-width 0.5px
+		stroke-opacity 0.5

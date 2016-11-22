@@ -13,12 +13,12 @@ function configure(width) {
         'scale_bar_distance': null,
         'paths': [
             'states',
+            'solar',
             'coal',
             'oil'
-            // 'cities'
         ],
         'labels': [
-            // 'cities'
+            // 'states'
         ],
         'label_nudges': {
             // 'cities': {

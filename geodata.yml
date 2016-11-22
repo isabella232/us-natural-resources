@@ -14,3 +14,7 @@ layers:
     oil:
         type: 'shp'
         path: 'data/TightOil_ShaleGas_Plays_Lower48_EIA.zip'
+
+    solar:
+        type: 'shp'
+        path: 'data/solar-buffered/solar.shp'
