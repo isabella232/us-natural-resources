@@ -287,7 +287,7 @@ var renderMap = function(typeConfig, instanceConfig) {
      * Reposition footer.
      */
     d3.selectAll('.footer')
-        .style('top', (mapHeight - 25) + 'px')
+        .style('top', (mapHeight - 10) + 'px')
 }
 
 // Bind on-load handler
