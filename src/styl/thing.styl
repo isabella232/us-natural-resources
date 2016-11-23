@@ -3,18 +3,65 @@
 // @import 'maps/europe'
 // @import 'maps/world'
 
+$coal = $qz-blue-2
+$oil = $qz-blue-4
+$solar = $qz-purp-1
+$wind = $qz-purp-3
+
+ul#legend
+   padding: 15px 0 0 10px
+   margin: 0
+   list-style-type: none
+
+   li
+     display: inline-block
+     margin: 0 18px 0 0
+     padding: 0
+     line-height: 17px
+
+     b
+       display: inline-block
+       width: 17px
+       height: 17px
+       margin-right: 6px
+       float: left
+       border: 1px solid $qz-map-graticule
+       border-radius(8px)
+
+     div
+       whitespace: nowrap
+       fill: $qz-gray-2
+       font-size: 14px
+       font-family: 'AdelleSans-Regular', Helvetica, Arial, sans-serif
+       float: left;
+
+     &.oil b
+       background-color: alpha($oil, 0.7)
+
+     &.coal b
+       background-color: alpha($coal, 0.7)
+
+     &.solar b
+       background-color: alpha($solar, 0.7)
+
+     &.wind b
+       background-color: alpha($wind, 0.7)
+
 .paths
 	.states path
 		fill $qz-map-land-fill
 
 	.solar path
-		fill $qz-purp-1
+		fill alpha($solar, 0.8)
 
 	.coal path
-		fill $qz-blue-2
+		fill alpha($coal, 0.8)
 
 	.oil path
-		fill $qz-blue-4
+		fill alpha($oil, 0.8)
+
+	.wind path
+		fill alpha($wind, 0.8)
 
 	.outlines path
 		fill none

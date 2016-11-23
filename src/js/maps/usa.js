@@ -14,6 +14,7 @@ function configure(width) {
         'paths': [
             'states',
             'solar',
+            'wind',
             'coal',
             'oil'
         ],

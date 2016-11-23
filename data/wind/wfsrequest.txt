@@ -1,0 +1,1 @@
+https://maps-prod-map1.nrel.gov/geoserver/nrel/ows?outputFormat=SHAPE-ZIP&propertyName=lat%2Clong%2Cstate%2Carea_km2%2Cregion%2Ca30%2Ca35%2Ca40%2Cthe_geom_4326&request=GetFeature&service=WFS&typeName=nrel%3Apot_wind_cap_080_current&version=1.0.0
