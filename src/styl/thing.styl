@@ -36,16 +36,16 @@ ul#legend
        float: left;
 
      &.oil b
-       background-color: alpha($oil, 0.7)
+       background-color: alpha($oil, 0.8)
 
      &.coal b
-       background-color: alpha($coal, 0.7)
+       background-color: alpha($coal, 0.8)
 
      &.solar b
-       background-color: alpha($solar, 0.7)
+       background-color: alpha($solar, 0.8)
 
      &.wind b
-       background-color: alpha($wind, 0.7)
+       background-color: alpha($wind, 0.8)
 
 .paths
 	.states path
@@ -68,4 +68,12 @@ ul#legend
 		fill-opacity 0
 		stroke $qz-map-land-stroke
 		stroke-width 0.5px
-		stroke-opacity 0.5
+		stroke-opacity 0.8
+
+// @media screen and (max-width 940px)
+// 	.outlines path
+// 		fill none
+// 		fill-opacity 0
+// 		stroke $qz-map-land-stroke
+// 		stroke-width 0.5px
+// 		stroke-opacity 1
