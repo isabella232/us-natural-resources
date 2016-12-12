@@ -36,32 +36,44 @@ ul#legend
        float: left;
 
      &.oil b
-       background-color: alpha($oil, 0.8)
+        background-color: alpha($oil, 0.6)
 
      &.coal b
-       background-color: alpha($coal, 0.8)
+        background: repeating-linear-gradient(
+           135deg,
+           alpha($coal, 0.8),
+           alpha($coal, 0.8) 3px,
+           alpha($qz-gray-1, 0.8) 3px,
+           alpha($qz-gray-1, 0.8) 6px
+        );
 
      &.solar b
-       background-color: alpha($solar, 0.8)
+        background: repeating-linear-gradient(
+           60deg,
+           alpha($solar, 0.8),
+           alpha($solar, 0.8) 3px,
+           alpha($qz-gray-1, 0.8) 3px,
+           alpha($qz-gray-1, 0.8) 6px
+        );
 
      &.wind b
-       background-color: alpha($wind, 0.8)
+       background-color: alpha($wind, 0.6)
 
 .paths
 	.states path
 		fill $qz-map-land-fill
 
-	.solar path
-		fill alpha($solar, 0.8)
+	// .solar path
+		// fill alpha($solar, 0.6)
 
-	.coal path
-		fill alpha($coal, 0.8)
+	// .coal path
+	// 	fill alpha($coal, 0.6)
 
 	.oil path
-		fill alpha($oil, 0.8)
+		fill alpha($oil, 0.6)
 
 	.wind path
-		fill alpha($wind, 0.8)
+		fill alpha($wind, 0.6)
 
 	.outlines path
 		fill none

@@ -2,6 +2,7 @@
 var d3 = require('d3');
 var geo = require('d3-geo-projection');
 var topojson = require('topojson');
+var textures = require('textures');
 
 // Local modules
 var features = require('./detectFeatures')();
@@ -126,6 +127,22 @@ var renderMap = function(typeConfig, instanceConfig) {
         .attr('width', mapWidth)
         .attr('height', mapHeight);
 
+    var coalStripes = textures.lines()
+        .thicker()
+        .size(7)
+        .stroke('rgba(196, 196, 196, 0.8)')
+        .background('rgba(22, 141, 217, 0.8)');
+
+    var solarStripes = textures.lines()
+        .thicker()
+        .size(12)
+        .orientation('7/8')
+        .stroke('rgba(196, 196, 196, 0.8)')
+        .background('rgba(209, 144, 182, 0.8)');
+
+    chartElement.call(coalStripes);
+    chartElement.call(solarStripes);
+
     /*
      * Render graticules.
      */
@@ -183,6 +200,12 @@ var renderMap = function(typeConfig, instanceConfig) {
         .enter().append('path')
             .attr('d', path)
             .attr('class', classifyFeature);
+
+    d3.selectAll('.coal path')
+        .style('fill', coalStripes.url());
+
+    d3.selectAll('.solar path')
+        .style('fill', solarStripes.url());
 
     /*
      * Render labels.
