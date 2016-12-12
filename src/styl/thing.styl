@@ -9,55 +9,55 @@ $solar = $qz-purp-1
 $wind = $qz-purp-4
 
 ul#legend
-   padding: 15px 0 0 10px
-   margin: 0
-   list-style-type: none
+	padding: 15px 0 0 10px
+	margin: 0
+	list-style-type: none
 
-   li
-     display: inline-block
-     margin: 0 18px 0 0
-     padding: 0
-     line-height: 17px
+	li
+		display: inline-block
+		margin: 0 18px 0 0
+		padding: 0
+		line-height: 17px
 
-     b
-       display: inline-block
-       width: 17px
-       height: 17px
-       margin-right: 6px
-       float: left
-       border: 1px solid $qz-map-graticule
-       border-radius(8px)
+		b
+			display: inline-block
+			width: 17px
+			height: 17px
+			margin-right: 6px
+			float: left
+			border: 1px solid $qz-map-graticule
+			border-radius(8px)
 
-     div
-       whitespace: nowrap
-       fill: $qz-gray-2
-       font-size: 14px
-       font-family: 'AdelleSans-Regular', Helvetica, Arial, sans-serif
-       float: left;
+		div
+			whitespace: nowrap
+			fill: $qz-gray-2
+			font-size: 14px
+			font-family: 'AdelleSans-Regular', Helvetica, Arial, sans-serif
+			float: left;
 
-     &.oil b
-        background-color: alpha($oil, 0.6)
+		&.oil b
+			background-color: alpha($oil, 0.6)
 
-     &.coal b
-        background: repeating-linear-gradient(
-           135deg,
-           alpha($coal, 0.8),
-           alpha($coal, 0.8) 3px,
-           alpha($qz-gray-1, 0.8) 3px,
-           alpha($qz-gray-1, 0.8) 6px
-        );
+		&.coal b
+			background: repeating-linear-gradient(
+				135deg,
+				alpha($coal, 0.8),
+				alpha($coal, 0.8) 3px,
+				alpha($qz-gray-1, 0.8) 3px,
+				alpha($qz-gray-1, 0.8) 6px
+			);
 
-     &.solar b
-        background: repeating-linear-gradient(
-           60deg,
-           alpha($solar, 0.8),
-           alpha($solar, 0.8) 3px,
-           alpha($qz-gray-1, 0.8) 3px,
-           alpha($qz-gray-1, 0.8) 6px
-        );
+		&.solar b
+			background: repeating-linear-gradient(
+				60deg,
+				alpha($solar, 0.8),
+				alpha($solar, 0.8) 3px,
+				alpha($qz-gray-1, 0.8) 3px,
+				alpha($qz-gray-1, 0.8) 6px
+			);
 
-     &.wind b
-       background-color: alpha($wind, 0.6)
+		&.wind b
+			background-color: alpha($wind, 0.6)
 
 .paths
 	.states path
@@ -67,7 +67,7 @@ ul#legend
 		// fill alpha($solar, 0.6)
 
 	// .coal path
-	// 	fill alpha($coal, 0.6)
+	//     fill alpha($coal, 0.6)
 
 	.oil path
 		fill alpha($oil, 0.6)
@@ -89,17 +89,18 @@ ul#legend
 	font-family $qz-sans
 	color $qz-gray-2
 	font-size 14px
+	padding-left: 10px
 
 	// &.left
-	// 	left 10px
-    //
+	//     left 10px
+	//
 	// &.right
-	// 	right 10px
+	//     right 10px
 
 // @media screen and (max-width 940px)
-// 	.outlines path
-// 		fill none
-// 		fill-opacity 0
-// 		stroke $qz-map-land-stroke
-// 		stroke-width 0.5px
-// 		stroke-opacity 1
+//     .outlines path
+//         fill none
+//         fill-opacity 0
+//         stroke $qz-map-land-stroke
+//         stroke-width 0.5px
+//         stroke-opacity 1
